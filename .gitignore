@@ -1,0 +1,39 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# Environments
+.env
+venv/
+ENV/
+env/
+.venv/
+.envrc
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Test and coverage
+.coverage
+nosetests.xml
+*.pytest_cache/
+
+# Dependency directories
+Pipfile.lock
+poetry.lock
+
+# Static and media files
+static/
+media/

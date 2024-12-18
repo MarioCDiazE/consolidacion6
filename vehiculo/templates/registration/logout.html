@@ -1,0 +1,10 @@
+{% extends 'vehiculo/base.html' %}
+
+{% block content %}
+<h1>Logout</h1>
+<p>Estás seguro que deseas cerrar sesión?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button class="btn btn-primary" type="submit">Logout</button>
+</form> 
+{% endblock %}

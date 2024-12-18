@@ -1,0 +1,42 @@
+{% extends 'vehiculo/base.html' %}
+
+{% block content %}
+<h1>Catálogo de vehículos</h1>
+<div>
+    <button>
+        <a href="?precio=bajo">Precio bajo</a>
+    </button>
+    <button>
+        <a href="?precio=medio">Precio medio</a>
+    </button>
+    <button>
+        <a href="?precio=alto">Precio alto</a>
+    </button>
+<table>
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Serial Carroceria</th>
+            <th>Serial Motor</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Condicion de precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for vehiculo in vehiculos %}
+        <tr>
+            <td>{{ vehiculo.marca }}</td>
+            <td>{{ vehiculo.modelo }}</td>
+            <td>{{ vehiculo.serial_carroceria }}</td>
+            <td>{{ vehiculo.serial_motor }}</td>
+            <td>{{ vehiculo.categoria }}</td>
+            <td>{{ vehiculo.precio }}</td>
+            <td>{{ vehiculo.condicion_precio }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}
